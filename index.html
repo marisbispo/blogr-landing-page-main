@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/estilo/style.css">
+  <link rel="stylesheet" href="estilo/style.css">
   <title>Frontend Mentor | [Blogr]</title>
 
 </head>
@@ -23,17 +23,28 @@
     <div class="cabecalho-menu">
       <img src="images/logo.svg" alt="logo-blogr" />
       <nav class="menu">
-        <ul>
-          <li class="menu-item">Product</li>
-          <li class="menu-item">Company</li>
-          <li class="menu-item">Connect</li>
+        <div data-menu="button" aria-expanded="false" aria-controls="menu"></div>
+        <ul class="horizontal-menu" data-menu="list" id="menu">
+          <li class="menu-item"><a href="#">Product</a></li>
+          <li class="menu-item"><a href="#">Company</a></li>
+          <li class="menu-item" data-dropdown><a href="#">Connect</a>
+            <ul class="dropdown-menu">
+              <li>Contact</li>
+              <li>Newsletter</li>
+              <li>Linkedin</li>
+            </ul>
+          </li>
+          <div class="botoes">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="signup">Sign Up</a>
+          </div>
         </ul>
       </nav>
     </div>
-    <div class="botoes">
+    <!-- <div class="botoes">
       <a href="#" class="login">Login</a>
       <a href="#" class="signup">Sign Up</a>
-    </div>
+    </div> -->
     <div class="chamada">
       <h1 class="titulo">A modern publishing platform</h1>
       <p>Grow your audience and build your online broad</p>
@@ -46,13 +57,15 @@
   <main class="conteudo">
     <h2 class="titulo-section">Designed for the future</h2>
     <section class="designed centralizar">
+      <img src="images/illustration-editor-desktop.svg" alt="illustration-editor-desktop" class="ilustracao-desktop">
+      <img src="images/illustration-editor-mobile.svg" alt="illustration-editor-desktop" class="ilustracao-mobile">
       <div class="texto-designed">
         <h3>Introducing an extensible editor</h3>
         <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating conten. The editor supports management of multiple blogs and allow easy manipulation of embeds such as images, videos, and Markdown. Extensiblitity with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
         <h3>Robust content management</h3>
         <p>Flexible content management enables users to easily move through posts. Increase the usabitlity of your blog by adding customized categories, setions, formats or flow. With this functionality, you're in full control.</p>
       </div>
-      <img src="images/illustration-editor-desktop.svg" alt="illustration-editor-desktop">
+
     </section>
     <section class="infrastructure">
       <img src="images/illustration-phones.svg" alt="illustration-phones">
@@ -62,7 +75,8 @@
       </div>
     </section>
     <section class="tool">
-      <img src="images/illustration-laptop-desktop.svg" alt="illustration-phones">
+      <img src="images/illustration-laptop-desktop.svg" alt="illustration-phones" class="laptop-desktop">
+      <img src="images/illustration-laptop-mobile.svg" alt="illustration-phones" class="laptop-mobile">
       <div class="text-tool">
         <h3>Free, open, simple</h3>
         <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
@@ -72,7 +86,7 @@
     </section>
   </main>
   <footer class="rodape">
-    <img src="/images/logo.svg" alt="Logo Blogr">
+    <img src="images/logo.svg" alt="Logo Blogr">
     <div class="Product">
       <h4>Product</h4>
       <ul>
@@ -102,5 +116,6 @@
     </div>
   </footer>
 </body>
+<script type="module" src="js/script.js"></script>
 
 </html>
