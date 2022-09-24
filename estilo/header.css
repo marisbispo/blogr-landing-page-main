@@ -169,6 +169,18 @@ border:1px solid white;
 color:white;
 }
 
+@media (max-width: 1400px) {
+  .horizontal-menu{
+  width: 950px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .horizontal-menu{
+  width: 850px;
+  }
+}
+
  
 @media (max-width: 1200px) {
   .centralizar {
@@ -178,11 +190,27 @@ color:white;
     width: 500px;
 }
  }
+ @media (max-width: 1100px) {
+ .horizontal-menu{
+  width: 730px;
+  }
+}
 
  @media (max-width: 950px) {
   .centralizar {
     padding: 25px 25px 0 25px;
 }
+
+.horizontal-menu{
+  width: 650px;
+  }
+
+ }
+
+ @media (max-width: 850px) {
+.horizontal-menu{
+  width: 550px;
+  }
 
  }
 
@@ -203,4 +231,5 @@ color:white;
   font-size: 1rem;
  }
  }
+ 
  
